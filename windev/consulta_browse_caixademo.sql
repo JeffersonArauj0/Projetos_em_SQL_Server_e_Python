@@ -1,4 +1,4 @@
--- Raiz da Consulta para carregamento de um Browse Registro de Caixa
+-- Raiz da Consulta para carregamento de um Browse Registro de CaixaDemo
 Select CaixaDemo.Numero, Deposito, DT_Data, DT_DataVen,DT_DataPrev,Movimento,CGCCPF
 , (Select Nome From ClienteDemo Where CGC2 = CGCCPF) as NomeCliFor
 , Historico, ValorCob, 0, (Select [dbo].[FC_110_JaPago](CaixaDemo.Numero)) as JaPago
