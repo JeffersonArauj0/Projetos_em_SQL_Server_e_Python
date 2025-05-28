@@ -1,0 +1,1 @@
+SELECT * FROM dbo.sysobjects WHERE parent_obj = OBJECT_ID(N'[dbo].[PedidoDemo]') AND (OBJECTPROPERTY(id, N'IsTrigger') = 1)

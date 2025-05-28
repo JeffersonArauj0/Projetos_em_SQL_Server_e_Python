@@ -1,0 +1,15 @@
+CREATE TRIGGER [dbo].[TRG_UPD_PEDIDO_DEMO]
+ON [dbo].[PedidoDemo]
+FOR UPDATE 
+AS
+BEGIN
+    DECLARE @IntNUMERO INT
+
+    SELECT @IntNUMERO = DELETED.NUMERO FROM DELETED JOIN PedidoDemo ON PedidoDemo.NUMERO = DELETED.NUMERO
+
+    IF (SELECT NumeroLojaDemo FROM deleted WHERE NUMERO = @IntNUMERO) = 0
+        UPDATE PedidoDemo SET NumeroLojaDemo = Numero WHERE NUMERO = @IntNUMERO    
+
+    IF (SELECT EnviarLojaDemo FROM deleted WHERE NUMERO = @IntNUMERO) <> 'S'
+        UPDATE PedidoDemo SET EnviarLojaDemo = 'S' WHERE NUMERO = @IntNUMERO
+END

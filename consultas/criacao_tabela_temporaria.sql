@@ -1,0 +1,1 @@
+SELECT * INTO TempPedidoDemo FROM PedidoDemo WHERE Situacao = '2'

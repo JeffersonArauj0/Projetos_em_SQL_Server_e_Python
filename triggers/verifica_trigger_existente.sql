@@ -1,0 +1,2 @@
+IF NOT EXISTS(SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'TRG_INC_PEDIDO_DEMO') AND parent_obj = OBJECT_ID(N'[dbo].[PedidoDemo]') AND (OBJECTPROPERTY(id, 'IsTrigger') = 1))
+PRINT 'Essa trigger não existe'

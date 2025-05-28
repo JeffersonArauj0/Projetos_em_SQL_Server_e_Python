@@ -1,0 +1,15 @@
+CREATE TRIGGER [dbo].[TRG_INC_PEDIDO_DEMO]
+ON [dbo].[PedidoDemo]
+FOR INSERT 
+AS
+BEGIN
+    DECLARE @IntNUMERO INT
+
+    SELECT @IntNUMERO = INSERTED.NUMERO FROM INSERTED JOIN PedidoDemo ON PedidoDemo.NUMERO = INSERTED.NUMERO
+
+    IF (SELECT NumeroLojaDemo FROM inserted WHERE NUMERO = @IntNUMERO) = 0
+        UPDATE PedidoDemo SET NumeroLojaDemo = Numero WHERE NUMERO = @IntNUMERO    
+
+    IF (SELECT EnviarLojaDemo FROM inserted WHERE NUMERO = @IntNUMERO) <> 'S'
+        UPDATE PedidoDemo SET EnviarLojaDemo = 'S' WHERE NUMERO = @IntNUMERO
+END

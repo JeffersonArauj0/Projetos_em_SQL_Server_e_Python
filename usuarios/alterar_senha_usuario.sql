@@ -1,0 +1,1 @@
+UPDATE UsuariosDemo SET Senha = '827ccb0eea8a706c4c34a16891f84e7b' WHERE Usuario = 'USUARIO_TESTE'
