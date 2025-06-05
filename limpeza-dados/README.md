@@ -1,20 +1,15 @@
-# Data Cleanup Script – Generic ERP Example
+# 🧹 Script de Limpeza de Dados – Exemplo Genérico para ERP
 
-This SQL script is designed to simulate the data-cleaning process in a relational database similar to an ERP system. It removes or truncates records from related tables in a logical and dependency-aware manner.
+Este script SQL demonstra um processo completo de limpeza de dados em um banco de dados relacional fictício. Ele simula ações comuns em sistemas ERP, como exclusão de registros órfãos, truncamento de tabelas e controle de gatilhos (triggers).
 
-## Features
+### 📋 O que este script faz:
 
-- Cleans up orphaned or invalid records across multiple tables.
-- Uses conditional logic to determine when to truncate.
-- Disables and re-enables triggers safely.
-- Generic naming for reuse or demonstration purposes.
+- Remove registros inconsistentes ou inválidos com `DELETE`
+- Trunca tabelas quando possível (`TRUNCATE TABLE`)
+- Desabilita e reabilita triggers para evitar restrições durante a limpeza
+- Segue uma ordem lógica baseada em dependências entre tabelas
 
-## Use Cases
+### 📁 Arquivos
 
-- Demonstration of SQL scripting skills.
-- Portfolio showcase.
-- Educational projects involving database maintenance.
-
-## Note
-
-All table names and columns are fictitious and used solely for demonstration purposes.
+- `cleanup-script-generic-erp.sql` → Script SQL completo
+- `LICENSE` → Licença MIT para uso livre
