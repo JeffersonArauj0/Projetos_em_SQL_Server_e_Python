@@ -1,7 +1,6 @@
 # 📊 SQL Server Scripts Portfolio
 
 Este repositório contém exemplos fictícios de scripts SQL Server utilizados para:
-
 ✅ Atualizações em lote
 ✅ Criação e manutenção de triggers
 ✅ Consultas SQL otimizadas
