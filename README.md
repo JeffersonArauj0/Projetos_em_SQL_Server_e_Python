@@ -1,4 +1,4 @@
-# 📊 SQL Server Scripts Portfolio
+# 📊 SQL Server / Python Scripts Portfolio
 
 Este repositório contém exemplos fictícios de scripts SQL Server utilizados para:
 ✅ Atualizações em lote
